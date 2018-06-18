@@ -27,6 +27,7 @@ int main( int argc, char** argv ) {
   int minHessian = 400;
 
   Ptr<SURF> detector = SURF::create( minHessian );
+
   std::vector<KeyPoint> keypoints_1, keypoints_2;
   detector->detect( img_1, keypoints_1 );
   detector->detect( img_2, keypoints_2 );
@@ -49,6 +50,20 @@ int main( int argc, char** argv ) {
     features0001Write.close();
     features0002Write.close();
 
-  cv::waitKey(0);
-  return 0;
+    Mat descriptors_1, descriptors_2;
+    Ptr<SURF> extractor = SURF::create();
+
+    extractor->compute( img_1, keypoints_1, descriptors_1 );
+    extractor->compute( img_2, keypoints_2, descriptors_2 );
+    BFMatcher matcher(NORM_L2);
+    std::vector< DMatch > matches;
+    matcher.match( descriptors_1, descriptors_2, matches );
+
+    Mat img_matches;
+    drawMatches( img_1, keypoints_1, img_2, keypoints_2, matches, img_matches );
+
+      //-- Show detected matches
+    imshow("Matches", img_matches );
+    cv::waitKey(0);
+    return 0;
 }
