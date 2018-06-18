@@ -19,6 +19,7 @@ CONFIG += link_pkgconfig
 PKGCONFIG += opencv
 CONFIG += c++11
 LIBS += -ltbb
+CONFIG += opencv
 
 SOURCES += \
         main.cpp
