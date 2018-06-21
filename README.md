@@ -6,8 +6,9 @@ This OpenCV project is done as an Assignment of **Image Processing and Computer 
  
 ### Development Environment
 
-* [OpenCV 4.0.0(Compiled Github repository code)](https://github.com/opencv/opencv)
-* C++
+* [OpenCV 3.4.1 release Source code](https://github.com/opencv/opencv/releases/tag/3.4.1)
+* [opencv_contrib 3.4.1 release Source code](https://github.com/opencv/opencv_contrib/releases/tag/3.4.1)
+* C++ 
 * [QtCreator 5](https://www.qt.io/download)
 * Ubuntu 16.04
 
@@ -23,7 +24,8 @@ But I would like to make an alternative suggestion for **Step 3 –  Get OpenCV*
 
 Choose same release number in both links and download Source Code. Reason for this is Releases are a stable Delivery ready stable status of repositories but main repository on development stage so there is a chance that might break your build. Read more about release https://stackoverflow.com/a/33587799/2940265
 
-* **QtCreator 5**
+* **[QtCreator 5](https://www.qt.io/download)**
 
 Installed using the Online installer from given link, which downloaded approximately over 6 GB.
+
 

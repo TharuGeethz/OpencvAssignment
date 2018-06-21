@@ -23,5 +23,3 @@ CONFIG += opencv
 
 SOURCES += \
         main.cpp
-
-HEADERS +=
